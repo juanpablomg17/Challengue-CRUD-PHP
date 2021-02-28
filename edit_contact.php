@@ -41,28 +41,34 @@ if (isset($_POST['update'])) {
 <div class="container p-4">
     <div class="row">
         <div class="col-md-4 mx-auto">
-            <div class="card card-body">
-                <form action="edit_contact.php?id=<?php echo $_GET['id']; ?>" method="POST">
-                    <div class="form-group mb-3">
-                        <input type="text" name="name" value="<?php echo $name ?>" class="form-control" placeholder="Update Name" />
-                    </div>
+            <div class="card">
+                <div class="card-header bg-secondary ">
+                    <h2 class="text-center text-light">Update Your Contact</h2>
+                </div>
+                <div class="card-body">
+                    <form action="edit_contact.php?id=<?php echo $_GET['id']; ?>" method="POST">
+                        <div class="form-group mb-3">
+                            <input type="text" name="name" value="<?php echo $name ?>" class="form-control" placeholder="Update Name" />
+                        </div>
 
-                    <div class="form-group mb-3">
-                        <input type="number" name="phone" value="<?php echo $phone ?>" class="form-control" placeholder="Update phone" />
-                    </div>
+                        <div class="form-group mb-3">
+                            <input type="number" name="phone" value="<?php echo $phone ?>" class="form-control" placeholder="Update phone" />
+                        </div>
 
-                    <div class="form-group mb-3">
-                        <input type="email" name="email" value="<?php echo $email ?>" class="form-control" placeholder="Update email" />
-                    </div>
+                        <div class="form-group mb-3">
+                            <input type="email" name="email" value="<?php echo $email ?>" class="form-control" placeholder="Update email" />
+                        </div>
 
-                    <div class="form-group mb-3">
-                        <input type="text" name="adress" value="<?php echo $adress ?>" class="form-control" placeholder="Update adress" />
-                    </div>
+                        <div class="form-group mb-3">
+                            <input type="text" name="adress" value="<?php echo $adress ?>" class="form-control" placeholder="Update adress" />
+                        </div>
 
-                    <button name="update" class="btn btn-success btn-block" value="update">
-                        Update
-                    </button>
-                </form>
+                        <button name="update" style="display: inline-block;width: 100%;" class="btn btn-success btn-block" value="update">
+                            Update
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>

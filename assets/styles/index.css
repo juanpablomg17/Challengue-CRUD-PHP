@@ -8,7 +8,25 @@
     margin-bottom: 10px;
     border: 1px gray solid;
 }
+
 #btn-save{
     display: inline-block;
     width: 100%;
 }
+
+
+.container_table{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 450px;
+}
+
+.container_table::-webkit-scrollbar{
+    width: 7px;
+}
+
+.container_table::-webkit-scrollbar-thumb{
+    background-color: #6c757d;
+    border-radius: 10px;
+}
+
