@@ -4,6 +4,7 @@
 <?php include("./includes/Header.php") ?>
 
 <link rel="stylesheet" href="assets/styles/index.css">
+<script src="./js/validar.js"></script>
 <!-- DATA: name, phone, email and adress -->
 <div class="container p-4">
     <div class=row>
@@ -27,21 +28,21 @@
                     <h2>Contact Form</h2>
                 </div>
                 <div class="card-body">
-                    <form action='save_contact.php' method="POST">
+                    <form action='save_contact.php' method="POST" onsubmit="return validar();">
 
                         <div class="form-group mb-3">
-                            <input type="text" name="name-contact" class="form-control" placeholder="Type your name" autofocus />
+                            <input type="text" id="name-contact" name="name-contact" class="form-control" placeholder="Type your name" autofocus />
                         </div>
                         <div class="form-group mb-3">
-                            <input type="number" name="phone-contact" class="form-control" placeholder="Type your cellphone number" />
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <input type="email" name="email-contact" class="form-control" placeholder="Type your email" />
+                            <input type="number" id="phone-contact" name="phone-contact" class="form-control" placeholder="Type your cellphone number" />
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="text" name="adress-contact" class="form-control" placeholder="Type your adress" />
+                            <input  id="email-contact" name="email-contact" class="form-control" placeholder="Type your email" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <input type="text" id="adress-contact" name="adress-contact" class="form-control" placeholder="Type your adress" />
                         </div>
 
                         <input type="submit" id="btn-save" name="save_contact" class="btn btn-success btn-block" value="Save Contact">
